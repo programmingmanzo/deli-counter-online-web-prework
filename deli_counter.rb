@@ -4,14 +4,14 @@ require 'pry'
 # NO PARAMETERS FOR ANY OF THE METHODS
 
 array = [615, 616]
-$current_number = 617
+current_number = 617
 def line
  
   if $array.none? == true 
     puts "The line is currently empty."
   else
     current_line = "The line is currently:"
-    $array.each_with_index do |name, index|
+    array.each_with_index do |name, index|
       current_line += " #{index.to_i+1}. #{name}"
     end
     puts "#{current_line}"
@@ -19,16 +19,16 @@ def line
 end
 
 def take_a_number
-  $array.push($current_number += 1 )
-  spot_in_line = $array.index($current_number)
-  puts "Welcome, #{$current_number}. You are number #{$array.index($current_number)+1} in line."
+  array.push($current_number += 1 )
+  spot_in_line = array.index($current_number)
+  puts "Welcome, #{current_number}. You are number #{array.index($current_number)+1} in line."
 end
 
 def now_serving
-  if $array.none? == true 
+  if array.none? == true 
     puts "There is nobody waiting to be served!"
-    elsif $array.none? == false 
-    puts "Currently serving #{$array.shift}."
+    elsif array.none? == false 
+    puts "Currently serving #{array.shift}."
   end
 end
 
