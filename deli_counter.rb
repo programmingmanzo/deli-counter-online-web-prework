@@ -3,7 +3,7 @@ require 'pry'
 # start with 617 as the current number, and start the line with [615, 616]
 # NO PARAMETERS FOR ANY OF THE METHODS
 
-$array = [615, 616]
+array = [615, 616]
 $current_number = 617
 def line
  
